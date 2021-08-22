@@ -1,0 +1,29 @@
+function reverse(str) {
+  if (!str || typeof str != 'string' || str.length < 2)
+  return str;
+
+  const backwards = [];
+  const totalItems = str.length - 1;
+  for( let i = totalItems; i >= 0; i--){
+    backwards.push(str[i]);
+  }
+  return backwards.join('');
+}
+
+// First approach above
+
+// Second approach
+
+function reverse2(str){
+  
+  return str.split('').reverse().join('');
+}
+
+//third approach 
+
+const reverse3 = str => [...str].reverse().join('');
+
+
+reverse('Hi Faiaz');
+reverse2('Hi Rizwaan');
+reverse3('Hi Everyone');
