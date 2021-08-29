@@ -1,0 +1,31 @@
+//Iterative Approach
+function reverseString(string){
+  let arrayString = string.split("");
+  let reversedArray = [];
+
+  function addToArray(array){
+
+    if(array.length > 0){
+      reversedArray.push(array.pop());
+      addToArray(array);
+
+    }
+    return;
+  }
+  addToArray(arrayString);
+  return reversedArray.join("");
+}
+
+reverseString('yoyo master');
+
+
+
+// Recursive Approach
+function reverseStringRecursive(string){
+  if ( string === " "){
+    return " ";
+  } else {
+    return reverseStringRecursive(string.substring(1)) + string.charAt(0)
+  }
+}
+reverseStringRecursive('yoyo master');
